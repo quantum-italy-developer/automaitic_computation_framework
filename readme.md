@@ -8,6 +8,11 @@ intensive calculation on remote powerfull server enablign to:
   calculation on the on line database.
 * **Centralization**:  The database acts as a common data collector that can
 be shared among team members and research community.
+  
+More detailed documentation can be find on the documentation website:
+[https://caframework.netlify.app](https://caframework.netlify.app)
+
+
 
 
 ### Requirements
