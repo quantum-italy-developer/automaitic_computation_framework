@@ -1,0 +1,22 @@
+{
+  "variables": {
+                  "var_1": [3.4,3.5,3.6,3.7,3.8],
+                  "var_2": [3.4,3.5,3.6,3.7,3.8]
+               },
+  "master": {
+              "init": {
+                    "var_1": 2,
+                    "var_3": "test"
+              },
+
+              "run": {
+                    "var_2": 7,
+                    "var_4": "test1"
+              },
+
+              "save": {
+                    "db_name": "heisenberg_vqe_multiple_tests"
+              }
+
+             }
+}

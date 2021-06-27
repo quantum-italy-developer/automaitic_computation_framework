@@ -1,0 +1,13 @@
+{
+  "IBMQ": {
+             "my_api_token" : "",
+             "hub": "ibm-q",
+             "group": "open",
+             "project":"main"
+          },
+  "Cloudant": {
+             "username":"",
+             "password":"",
+             "url":""
+              }
+}
