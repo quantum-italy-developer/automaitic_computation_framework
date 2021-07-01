@@ -12,7 +12,7 @@
 #
 # import os
 import sys
-import stanford_theme
+#import stanford_theme
 
 pat = '/Users/IT059242/Desktop/QUANTUM/framework'
 sys.path.insert(0, pat)
