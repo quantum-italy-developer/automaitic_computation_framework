@@ -14,7 +14,7 @@
 import sys
 #import stanford_theme
 
-pat = '/Users/IT059242/Desktop/QUANTUM/framework'
+pat = '../..'
 sys.path.insert(0, pat)
 
 
