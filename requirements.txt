@@ -1,1 +1,2 @@
 qiskit==0.24.1
+cloudant==2.14.0
