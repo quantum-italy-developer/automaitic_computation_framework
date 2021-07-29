@@ -6,42 +6,47 @@
 
 Computation Framework's documentation
 ===========================================================
-This framework was born from a need emerged conducting research activity, expecialy running time/resource intensive
-calculation that most of the time are perfomed on server/Cluster or HPC environment.
-Some lucky researchers (like us) dispose of more than one environment and also data are collected by different people,
-generally located in different places and working in different time.
+Conduct a research activity that implies modelling complex system and/or find optimal parameters in variational methods
+could be demanding in terms of time and resources. This is even more evident in the quantum computing realm, in this period of near term devices
+we are used to benchmark our methods with classical simulations.
 
-For this reason we decided to desing and build a system capable to be used by different people enabling data collection
-following the same rules and structures. We decided to design a tool that split the activities in three different pieces:
+This framework was born when we started our research project published here: link.
+We realized soon that the way we organized our simulation to exploit the usage of server/cluster or HPC environment could have
+been generalised to several use cases. For those reasons we publish it here so that we could be of help for researchers
+in their daily activities.
+The large amount of research project are conducted in teams and this implies having more than one environment and also data generated and/or collected by different people, could be a problem without having
+a centralized repository.
+For this reason we decided to design and build a flexible and light weighted system capable to be used by different people
+enabling data collection according to the same rules and structures.
+The main research tasks are split into three different pieces:
 
 .. image:: images/high_level_arch.png
   :width: 80%
   :align: center
   :alt: Alternative text
 
-The first part designated to enable parallel calculation on 'computational environemnt' the second part is database,
-for this framework we choose we provided facilities to connect the
+The first part enables parallel calculation on 'computational environment', the second part is related to the managing of
+data, and for this framework we provide facilities to connect the
 `IBM Cloud cloudant database <https://cloud.ibm.com/catalog/services/cloudant>`_.
-The third part consist on a plot class, on which data are retrieved from the database, postprocessed and plotted on yuor
-own computer on a notebook on jupyter environment or on your own python script.
+The third part consists retrieving information from the database and eventually implement some plot functions
+where the user can manipulate data using a simple jupyter notebook or his own python script.
 
 Data calculation
 ================
-This part is dedicated, as introduced, to the intensive numerical calculation (real quantum devices or simulated on classical devices)
-Usually this part is conducted on upgraded computers, HPC clusesters or quantum cloud devices. we experienced that some
-simulated calculation need a huge amount of memory and execution time, for this reason we ran them on two different
-upgraded servers, so we decided to develop this tool in order to keep our results organized and structured avoiding to
-lose results or manually move files thourgh different environment.
-Moreover with this kind of collection the obtained results are available once they are ready to the whole team who is
-enabled to accede to the database, while results on the machine where they were produced are available also to the
-people enabled to access on it.
+This part is dedicated to the intensive numerical calculation (real quantum devices or simulated on classical devices).
+Usually this part is conducted on upgraded computers, HPC clusters or quantum cloud devices. Some
+simulated calculation need a huge amount of memory and execution time and with this tool we can keep our results organized and structured avoiding to
+lose results or manually move files through different environments.
+Moreover, in this configuration the obtained results are available to the whole team that have access to the database and
+with the possibility to configure also a dashboard.
 
 Data collection
 ===============
-We decided to collect all the obtained results on a **No-SQL json based database** beacause collect and serialize data on
-a json is the easiest way on a python class. for this reason we defined on the constructor function of the metaclass
-a json attribute named *final_json* to collect all the metadata of the performed run and all the results (raw and post
-processed) and at the end of the calculation we pull this serialized json as a new record on the database.
+We decided to collect all the obtained results on a **No-SQL json based database** because the collection and serialization of
+data using the json format is the easiest way on a python class. In this direction we defined a json attribute named *final_json*
+on the constructor function of the metaclass to collect all the metadata coming from the performed run.
+We give the user the possibility to save all the results (raw and post
+processed) as a new record on the database at the end of the calculation.
 
 .. warning::
    Remember to fill the ``final_json`` attribute with only
@@ -49,13 +54,13 @@ processed) and at the end of the calculation we pull this serialized json as a n
 
 Data Plot
 =========
-This last part is the framework component dedicated to retrieve data from the database and create plot and reports
-in order to transform data to acquire the most effective communicative power.
-In this framwork also this part has been written in python in order to be used in the jupyter environment to
-post process resuls and graphical representation.
+This last part of the framework component is dedicated to retrieve data from the database and create plot and reports
+in order to transform data for a most effective communicative power.
+In this framework also this part has been written in python in order to be used in the jupyter environment to
+allow an easy and quick implementation of post processing of saved data and provide graphical representation.
 
-Considering that data are produced and stored near real time and that each plot is buil quering the database,
-it allows to say that each plot is a live report of the obtained results, wherever they are produced.
+Considering that data are produced and stored in near real time and that each plot is built quering the database,
+we could say say that each plot is a live report of the obtained results.
 
 
 
