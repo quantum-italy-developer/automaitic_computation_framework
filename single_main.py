@@ -3,8 +3,7 @@ from implementation.execution import Calculation
 import argparse
 '''
 
-Function to run VQE for the Heisenberg use case. Read from config file.
-USAGE: python main.py -in config.json
+Function to run calculation upon the built class (Calculation)
 
 '''
 parser = argparse.ArgumentParser()

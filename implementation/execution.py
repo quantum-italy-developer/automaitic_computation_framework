@@ -16,9 +16,9 @@ __status__ = 'Development'
 # Version (0.0.x = 'Prototype', 0.x.x = 'Development', x.x.x = 'Pre-production)
 __version__ = '0.1.0'
 # Authors (e.g. code writers)
-__author__ = ('Antonello Aita <>',
+__author__ = ('Antonello Aita <antonello.aita@gmail.com>',
               'Luca Crippa <>',
-              'Michele Grossi <>')
+              'Michele Grossi <michele.grossi@cern.ch>')
 # Maintainer
 __maintainer__ = ''
 # Email of the maintainer
@@ -40,7 +40,7 @@ from CAF.MetaClass import ComputationClass
 
 
 # =============================================================================
-# QHEISENBERG CLASS
+# CALCULATION CLASS
 # =============================================================================
 class Calculation(ComputationClass):
     """
